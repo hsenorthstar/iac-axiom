@@ -1,0 +1,73 @@
+/* @iac/tokens — the single visual source of truth.
+   Same numbers feed web (this file) and mobile (theme.ts). */
+:root {
+  /* Brand */
+  --iac-primary: #1E5FD6;
+  --iac-primary-600: #1A53BE;
+  --iac-primary-700: #163F8F;
+  --iac-accent: #16C7B5;
+  --iac-accent-600: #11A99A;
+  --iac-gold: #F2B233;
+  --iac-gold-600: #D99A1E;
+
+  /* Surfaces (dark, arena feel) */
+  --bg: #0B1020;
+  --bg-elev: #121A2E;
+  --bg-elev-2: #18233D;
+  --surface: #141D32;
+  --line: #243150;
+  --line-soft: #1C2742;
+
+  /* Text */
+  --text: #EAF0FB;
+  --text-dim: #A7B4CE;
+  --text-mute: #6E7C9C;
+
+  /* Status */
+  --ok: #16C7B5;
+  --warn: #F2B233;
+  --danger: #F2557A;
+  --info: #4C8DFF;
+
+  /* Radius */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 26px;
+  --r-pill: 999px;
+
+  /* Spacing scale */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px;
+  --s-5: 24px; --s-6: 32px; --s-7: 48px; --s-8: 64px;
+
+  /* Shadow */
+  --sh-1: 0 1px 2px rgba(0,0,0,.3);
+  --sh-2: 0 8px 24px rgba(3,8,20,.45);
+  --sh-glow: 0 0 0 1px rgba(30,95,214,.4), 0 12px 40px rgba(30,95,214,.25);
+
+  /* Typography */
+  --font-display: "Sora", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  /* Motion (IAC_Motion_Spec) */
+  --ease: cubic-bezier(.22,.61,.36,1);
+  --ease-out: cubic-bezier(.16,1,.3,1);
+  --dur-fast: 140ms;
+  --dur: 240ms;
+  --dur-slow: 420ms;
+
+  /* Layout */
+  --sidebar-w: 248px;
+  --topbar-h: 60px;
+  --maxw: 1200px;
+}
+
+/* Light marketing sections opt-in */
+.on-light {
+  --text: #0B1020;
+  --text-dim: #45526E;
+  --text-mute: #6E7C9C;
+  --line: #E2E8F4;
+  --surface: #FFFFFF;
+  --bg-elev: #F6F8FD;
+}
