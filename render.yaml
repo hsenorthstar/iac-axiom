@@ -1,5 +1,9 @@
-# One-click deploy to Render — https://render.com (free tier works).
+# One-click deploy to Render — https://render.com
 # In Render: New → Blueprint → connect this repo. Render reads this file.
+# Free-tier compatible (no persistent disk). The app auto-seeds on boot; the
+# SQLite file lives in /tmp, which resets on redeploy/spin-down. To make data
+# durable, either: (a) add a `disk:` block + change `plan` to `starter`, or
+# (b) swap to a managed Postgres (see README "Upgrading to Postgres").
 services:
   - type: web
     name: iac-axiom
@@ -12,8 +16,4 @@ services:
       - key: JWT_SECRET
         generateValue: true          # Render generates a strong secret
       - key: DATABASE_PATH
-        value: /var/data/iac.db
-    disk:
-      name: iac-data                 # persistent disk so the DB survives redeploys
-      mountPath: /var/data
-      sizeGB: 1
+        value: /tmp/iac.db
